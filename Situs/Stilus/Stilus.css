@@ -1,0 +1,40 @@
+body
+{
+    font-family: "EB Garamond", serif;
+    font-size: 17pt;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+}
+
+h1, h2, h3, header, footer
+{
+    font-family: "Montserrat", sans-serif;
+}
+
+header
+{
+    text-align: center;
+}
+
+p
+{
+    text-align: justify;
+    hyphens: auto;
+    word-spacing: -0.05em;
+    letter-spacing: 0.02em;
+}
+
+.no-blue
+{
+    color: inherit;
+}
+
+nav a img {
+    width: 500px; /* Larghezza fissa */
+    height: auto; /* Altezza regolata automaticamente */
+    border-radius: 10px; /* Angoli arrotondati */
+    border: 2px solid #ccc; /* Cornice leggera */
+    padding: 5px; /* Spazio interno tra immagine e bordo */
+    background-color: white; /* Sfondo per contrasto */
+}
