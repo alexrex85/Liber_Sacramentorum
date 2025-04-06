@@ -10,9 +10,7 @@ The scans of the individual pages of the entire *Liber Sacramentorum* were proce
 Using [**Pandoc**](https://pandoc.org/), the text was then transcoded from **Markdown** to **HTML** with the following specific command:
 
 ```sh
-{
     pandoc -o output.html input.md
-}
 ```
 
 The resulting code was then inserted into a series of specially designed templates: for each individual section of the *Liber Sacramentorum*, an **HTML** page of the type [`Caput_00.html`](#Caput) was created.  
@@ -21,7 +19,7 @@ The general index of each of the ten volumes that form the *Liber Sacramentorum*
 
 In the [homepage](#Domus), the colophon of each volume is displayed, allowing access to the index of each one.
 
-The formatting and animation of the entire site's pages are expressed in [CSS](#CSS) and [JavaScript](#JavaScript), respectively.
+The formatting and animation of the entire site's pages are expressed in [CSS](#CSS) and [JavaScript](#JS), respectively.
 
 ## Structure of single pages {#Page-Structure}
 
@@ -32,7 +30,6 @@ The general structure of the individual **HTML** pages is presented here below.
 This is the code for the homepage.
 
 ```html
-{
 <!DOCTYPE html>
 
 <html lang="it">
@@ -71,7 +68,6 @@ This is the code for the homepage.
     </footer>
 </body>
 </html>
-}
 ```
 
 ### Volumen {#Volumen}
@@ -79,14 +75,13 @@ This is the code for the homepage.
 The index of each volume features this code.
 
 ```html
-{
 <!DOCTYPE html>
 
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volume I</title>
+    <title>Volume 0</title>
     <link rel="stylesheet" href="Stilus/Stilus.css">
     <script src="Stilus/Scaenarium.js" defer></script>
 </head>
@@ -129,7 +124,6 @@ The index of each volume features this code.
     </footer>
 </body>
 </html>
-}
 ```
 
 ### Caput {#Caput}
@@ -137,7 +131,6 @@ The index of each volume features this code.
 Each chapter presents this structure.
 
 ```html
-{
 <!DOCTYPE html>
 
 <html lang="it">
@@ -174,7 +167,6 @@ Each chapter presents this structure.
     </footer>
 </body>
 </html>
-}
 ```
 
 ## Cascading Style Sheet {#CSS}
@@ -182,7 +174,6 @@ Each chapter presents this structure.
 The file `Stilus.css` defines the presentation and styling that regulate the entire website according to the following criteria.
 
 ```css
-{
 body
 {
     font-family: "EB Garamond", serif;
@@ -223,22 +214,19 @@ nav a img {
     padding: 5px;
     background-color: white;
 }
-}
 ```
 
 Other specific inline styles are declared within individual HTML tags.
 
-## JavaScript {#JavaScript}
+## JavaScript {#JS}
 
 The automations that manage certain functions of the entire website are defined in the `Scaenarium.js` file.
 
 ```js
-{
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll("a:not(.footnote-back):not(.footnote-ref)").forEach(link => {
         link.setAttribute("target", "_blank"); // Apre in una nuova scheda
         link.setAttribute("rel", "noopener noreferrer");
     });
 });
-}
 ```
