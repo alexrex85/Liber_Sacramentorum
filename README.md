@@ -183,7 +183,7 @@ body
     padding-bottom: 20px;
 }
 
-h1, h2, h3, header, footer
+h1, h2, h3, h4, header, footer
 {
     font-family: "Montserrat", sans-serif;
 }
